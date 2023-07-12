@@ -5,7 +5,13 @@
   <div class="container">
     <div class="content">
       <div class="leftSide">
-          
+        <div class="message">
+          <p class="title">Learn to code by watching others</p>
+        </div>
+        <div class="description">
+          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+            understanding how developers think is invaluable</p>
+        </div>
       </div>
       <div class="rightSide"></div>
     </div>
@@ -13,22 +19,44 @@
 </template>
 
 <style scoped lang="scss">
-.container{
+.container {
   width: 100vw;
   height: 100vh;
-  background: url('./images/bg-intro-desktop.png'),hsl(0, 100%, 74%) ;
+  background: url('./images/bg-intro-desktop.png'), hsl(0, 100%, 74%);
   display: flex;
   justify-content: center;
   align-items: center;
-  .content{
+  >.content {
     width: 80%;
     height: 90vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    .leftSide{
+
+    >.leftSide {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      color: white;
+      flex-direction: column;
+      >.message {
+        width: 500px;
+        >.title {
+          font-weight: 700;
+          font-size: 55px;
+          text-align: left;
+          line-height: 70px;
+        }
+      }
+      >.description {
+        width: 570px;
+        margin-top: 20px;
+        >p {
+          font-size: 18px;
+        }
+      }
     }
-    .rightSide{
-    }
+
+    .rightSide {}
   }
 }
 </style>
