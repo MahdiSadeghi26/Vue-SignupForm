@@ -4,12 +4,17 @@
 <template>
     <div class="signupContainer">
         <div class="terial">Try it free 7 days then <span>$20/mo. thereafter</span></div>
+        <div class="form">
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
     .signupContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         >.terial{
-        // width: 90%;
+        width: 95%;
         font-weight: 600;
         font-size: 18px;
         color: white;
@@ -19,9 +24,17 @@
         text-align: center;
         box-shadow: 0px 10px 0px -1px rgba(0,0,0,0.17);
         span{
-          color: #F5F5F5;
-          font-weight: 300;
+            color: #F5F5F5;
+            font-weight: 300;
         }
+    }
+    >.form{
+        width: 95%;
+        height: 80%;
+        border-radius: 10px;
+        background-color: white;
+        margin-top: 10px;
+        box-shadow: 0px 10px 0px -1px rgba(0,0,0,0.17);
       }
     }
 </style>
