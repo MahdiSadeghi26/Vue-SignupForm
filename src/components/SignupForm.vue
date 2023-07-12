@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="signupContainer">
-        <div class="terial">Try it free 7 days then $20/mo. thereafter</div>
+        <div class="terial">Try it free 7 days then <span>$20/mo. thereafter</span></div>
     </div>
 </template>
 <style lang="scss" scoped>
