@@ -1,4 +1,5 @@
 <script setup>
+import SignupForm from "./components/SignupForm.vue";
 </script>
 
 <template>
@@ -13,7 +14,9 @@
             understanding how developers think is invaluable</p>
         </div>
       </div>
-      <div class="rightSide"></div>
+      <div class="rightSide">
+        <SignupForm/>
+      </div>
     </div>
   </div>
 </template>
@@ -56,7 +59,9 @@
       }
     }
 
-    .rightSide {}
+    .rightSide {
+
+    }
   }
 }
 </style>
