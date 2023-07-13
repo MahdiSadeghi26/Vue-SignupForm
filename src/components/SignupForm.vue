@@ -1,16 +1,19 @@
 <script setup>
+import Input from './Input.vue';
 
 </script>
 <template>
     <div class="signupContainer">
         <div class="terial">Try it free 7 days then <span>$20/mo. thereafter</span></div>
         <div class="form">
+            <Input/>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
     .signupContainer{
-        height: 100%;
+        width: 600px;
+        height: auto;
         display: flex;
         flex-direction: column;
         >.terial{
@@ -30,11 +33,16 @@
     }
     >.form{
         width: 95%;
-        height: 80%;
+        height: 550px;
         border-radius: 10px;
         background-color: white;
-        margin-top: 10px;
+        margin-top: 20px;
         box-shadow: 0px 10px 0px -1px rgba(0,0,0,0.17);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 40px;
       }
     }
 </style>
