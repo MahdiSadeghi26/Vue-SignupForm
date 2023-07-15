@@ -30,7 +30,7 @@ import SignupForm from "./components/SignupForm.vue";
   justify-content: center;
   align-items: center;
   >.content {
-    width: 80%;
+    width: 85%;
     height: 85%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -47,24 +47,45 @@ import SignupForm from "./components/SignupForm.vue";
           font-weight: 700;
           font-size: 55px;
           text-align: left;
-          line-height: 70px;
+          line-height: 55px;
         }
       }
       >.description {
-        width: 570px;
+        width: 550px;
         margin-top: 20px;
         >p {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
 
     .rightSide {
+      width: 100%;
       height: 100%;
-      height: 100;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+@media screen and (min-width:1600px) {
+  .container{
+    >.content{
+      width: 80%;
+      >.leftSide{
+        >.message{
+          width: 600px;
+          >.title{
+            align-self: center;
+            line-height: 65px;
+            font-size: 60px;
+          }
+          .description{
+            align-self: flex-start;
+          }
+        }
+      }
     }
   }
 }

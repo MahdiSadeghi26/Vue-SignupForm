@@ -40,34 +40,40 @@ const passwordValidator = computed(() => {
     }
 })
 // submit fucntion
-const registerSuccess= computed(()=>{
-    startValidation.value=true
-    alert('Trail is sent For you!')
-    firstName.value=''
-    lastName.value=''
-    email.value=''
-    password.value=''
-    startValidation.value=false
+const registerSuccess = computed(() => {
+    if (!validatefName && !validatelName && !emailValidator && !passwordValidator) {
+        startValidation.value = true
+        alert('Trail is sent For you!')
+        firstName.value = ''
+        lastName.value = ''
+        email.value = ''
+        password.value = ''
+        startValidation.value = false
+    } else {
+        startValidation.value = true
+    }
 })
 </script>
 <template>
     <div class="input">
         <!-- firstName -->
-        <input v-model="firstName" :class="{ error: !validatefName }" type="text" class="inputItem"
-            :placeholder="validatefName ? 'First Name' : placeholder">
-        <p v-if="!validatefName" class="validatorMessage">FirstName cannot be empty</p>
-        <input v-model="lastName" :class="{ error: !validatelName }" type="text" class="inputItem"
-            :placeholder="validatelName ? 'Last Name' : placeholder">
-        <p v-if="!validatelName" class="validatorMessage">LastName cannot be empty</p>
-        <input v-model="email" :class="{ error: !emailValidator }" type="email" class="inputItem"
-            :placeholder="emailValidator ? 'Email Address' : placeholder = 'example@gmail.com'">
-        <p v-if="!emailValidator" class="validatorMessage">Looks like this is not an email</p>
-        <input v-model="password" :class="{ error: !passwordValidator }" type="password" class="inputItem"
-            :placeholder="passwordValidator ? 'Password' : placeholder = ''">
-        <p v-if="!passwordValidator" class="validatorMessage">Password cannot be empty</p>
-        <button @click="registerSuccess" class="submit">CLAIM YOUR FREE TIRAL</button>
-        <p class="agreement">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span>
-        </p>
+        <form action="#" @submit.prevent="registerSuccess">
+            <input v-model="firstName" :class="{ error: !validatefName }" type="text" class="inputItem"
+                :placeholder="validatefName ? 'First Name' : placeholder">
+            <lable v-if="!validatefName" class="validatorMessage">FirstName cannot be empty</lable>
+            <input v-model="lastName" :class="{ error: !validatelName }" type="text" class="inputItem"
+                :placeholder="validatelName ? 'Last Name' : placeholder">
+            <lable v-if="!validatelName" class="validatorMessage">LastName cannot be empty</lable>
+            <input v-model="email" :class="{ error: !emailValidator }" type="email" class="inputItem"
+                :placeholder="emailValidator ? 'Email Address' : placeholder = 'example@gmail.com'">
+            <lable v-if="!emailValidator" class="validatorMessage">Looks like this is not an email</lable>
+            <input v-model="password" :class="{ error: !passwordValidator }" type="password" class="inputItem"
+                :placeholder="passwordValidator ? 'Password' : placeholder = ''">
+            <lable v-if="!passwordValidator" class="validatorMessage">Password cannot be empty</lable>
+            <button type="submit" class="submit">CLAIM YOUR FREE TIRAL</button>
+            <lable class="agreement">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span>
+            </lable>
+        </form>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -78,11 +84,12 @@ const registerSuccess= computed(()=>{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    .firstName {
-        width: 100%;
-    }
-
-    .inputItem {
+    form{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        .inputItem {
         width: 100%;
         height: 65px;
         padding: 0 20px 0 30px;
@@ -101,6 +108,7 @@ const registerSuccess= computed(()=>{
             border: 2px solid black;
             outline: none;
         }
+    }
     }
 
     .error {
@@ -131,7 +139,8 @@ const registerSuccess= computed(()=>{
         box-shadow: 0px 7px 0px -1px rgba(0, 0, 0, 0.17);
         background-color: hsl(154, 59%, 51%);
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             // background-color: hsl(154, 65%, 38%);
             align-self: center;
             width: 95%;
@@ -142,10 +151,16 @@ const registerSuccess= computed(()=>{
 
     .agreement {
         color: hsl(246, 25%, 77%);
-        font-size: 14px;
+        font-size: 12px;
+
         span {
             color: hsl(0, 100%, 74%);
         }
+    }
+}
+@media screen and (min-width: 1500px) {
+    .input{
+        width:100%;
     }
 }
 </style>

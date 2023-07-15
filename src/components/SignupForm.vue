@@ -12,8 +12,8 @@ import Input from './Input.vue';
 </template>
 <style lang="scss" scoped>
     .signupContainer{
-        width: 600px;
-        height: auto;
+        width: 100%;
+        height: 600px;
         display: flex;
         flex-direction: column;
         >.terial{
@@ -38,11 +38,12 @@ import Input from './Input.vue';
         background-color: white;
         margin-top: 20px;
         box-shadow: 0px 10px 0px -1px rgba(0,0,0,0.17);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 40px;
+        padding: 40px 25px 20px 25px;
       }
+    }
+    @media screen and (min-width: 1600px) {
+        .signupContainer{
+            width: 650px;
+        }
     }
 </style>
