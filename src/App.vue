@@ -34,7 +34,6 @@ import SignupForm from "./components/SignupForm.vue";
     height: 85%;
     display: grid;
     grid-template-columns: 50% 50%;
-
     >.leftSide {
       display: flex;
       justify-content: center;
@@ -58,14 +57,12 @@ import SignupForm from "./components/SignupForm.vue";
         }
       }
     }
-
     .rightSide {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-end;
     }
   }
 }

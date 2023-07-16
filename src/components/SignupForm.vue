@@ -16,6 +16,8 @@ import Input from './Input.vue';
         height: 600px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         >.terial{
         width: 95%;
         font-weight: 600;
@@ -38,12 +40,12 @@ import Input from './Input.vue';
         background-color: white;
         margin-top: 20px;
         box-shadow: 0px 10px 0px -1px rgba(0,0,0,0.17);
-        padding: 40px 25px 20px 25px;
+        padding: 40px 25px 30px 25px;
       }
     }
     @media screen and (min-width: 1600px) {
         .signupContainer{
-            width: 650px;
+            width: 640px;
         }
     }
 </style>

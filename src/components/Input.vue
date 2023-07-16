@@ -93,7 +93,8 @@ const registerSuccess = computed(() => {
         width: 100%;
         height: 65px;
         padding: 0 20px 0 30px;
-        border-radius: 10px;
+        margin-bottom: 7px !important;
+        border-radius: 7px;
         border: 1.5px solid hsl(246, 25%, 77%);
         font-weight: 600;
         font-size: 16px;
@@ -117,13 +118,13 @@ const registerSuccess = computed(() => {
         background-position-x: 97%;
 
         &::placeholder {
-            color: hsl(0, 100%, 74%);
+            color: hsl(0, 100%, 74%) !important;
         }
     }
 
     .validatorMessage {
         font-size: 14px;
-        margin: 3px 0 15px 0;
+        margin: 3px 0 8px 0;
         color: #FE0000;
         align-self: flex-end;
     }
@@ -141,7 +142,6 @@ const registerSuccess = computed(() => {
         cursor: pointer;
 
         &:hover {
-            // background-color: hsl(154, 65%, 38%);
             align-self: center;
             width: 95%;
             background-color: #35A29F;
@@ -152,15 +152,10 @@ const registerSuccess = computed(() => {
     .agreement {
         color: hsl(246, 25%, 77%);
         font-size: 12px;
-
+        padding-top: 15px;
         span {
-            color: hsl(0, 100%, 74%);
+            color: hsl(0, 100%, 74%) ;
         }
-    }
-}
-@media screen and (min-width: 1500px) {
-    .input{
-        width:100%;
     }
 }
 </style>
