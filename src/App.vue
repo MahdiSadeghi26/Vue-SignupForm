@@ -131,7 +131,7 @@ import SignupForm from "./components/SignupForm.vue";
 // 992px
 @media screen and (max-width:992px) {
   .container{
-    background: url('./images/bg-intro-mobile.png') hsl(0, 100%, 74%);
+    background: url('/images/bg-intro-mobile.png') hsl(0, 100%, 74%);
     height: auto;
     >.content{
       display: flex;
