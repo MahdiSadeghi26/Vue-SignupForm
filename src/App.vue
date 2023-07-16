@@ -161,4 +161,33 @@ import SignupForm from "./components/SignupForm.vue";
     }
   }
 }
+// 576px
+@media screen and (max-width:576px) {
+  .container{
+    >.content{
+      padding: 70px 20px;
+      width: 100%;
+      >.leftSide{
+        padding-bottom: 20px;
+        >.message{
+          >.title{
+            font-size: 28px;
+            line-height: 40px;
+          }
+        }
+        >.description{
+          width: 95%;
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+      >.rightSide{
+        width: 100%;
+        
+      }
+    }
+
+  }
+}
 </style>

@@ -158,4 +158,16 @@ const registerSuccess = computed(() => {
         }
     }
 }
+@media screen and (max-width:576px) {
+    .input{
+        >form{
+            >.inputItem{
+            
+            &::placeholder{
+                font-size: 14px;
+            }
+        }
+        }
+    }
+}
 </style>

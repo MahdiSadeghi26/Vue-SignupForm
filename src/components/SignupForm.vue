@@ -57,4 +57,11 @@ import Input from './Input.vue';
             // height: 590px;
         }
     }
+    // 576 px
+    @media screen and (max-width:576px) {
+        .signupContainer{
+            width: 100%;
+            
+        }
+    }
 </style>
