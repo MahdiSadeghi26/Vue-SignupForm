@@ -25,7 +25,7 @@ import SignupForm from "./components/SignupForm.vue";
 .container {
   width: 100vw;
   height: 100vh;
-  background: url('./images/bg-intro-desktop.png'), hsl(0, 100%, 74%);
+  background: url('./images/bg-intro-desktop.png') hsl(0, 100%, 74%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,7 @@ import SignupForm from "./components/SignupForm.vue";
     }
   }
 }
+// media query
 @media screen and (min-width:1600px) {
   .container{
     >.content{
@@ -82,6 +83,80 @@ import SignupForm from "./components/SignupForm.vue";
             align-self: flex-start;
           }
         }
+      }
+      .rightSide{
+        align-items: center;
+      }
+    }
+  }
+}
+// 1400px
+@media screen and (max-width:1400px) {
+  .container{
+    >.content{
+      width: 90%;
+      >.leftSide{
+        >.message{
+          width: 500;
+          .title{
+            font-size: 50px;
+          }
+        }
+      }
+      >.rightSide{
+        align-items: flex-end;
+      }
+    }
+  }
+}
+// 1200px
+@media screen and (max-width:1200px) {
+  .container{
+    height: 100vh;
+    >.content{
+      width: 95%;
+      >.leftSide{
+        >.message{
+          >.description{
+            width: 100%;
+          }
+        }
+      }
+      >.rightSide{
+        align-items: flex-end;
+      }
+    }
+  }
+}
+// 992px
+@media screen and (max-width:992px) {
+  .container{
+    background: url('./images/bg-intro-mobile.png') hsl(0, 100%, 74%);
+    height: auto;
+    >.content{
+      display: flex;
+      padding: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      >.leftSide{
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+        >.message{
+          width: 300px;
+          >.title{
+            text-align: center;
+            font-size: 35px;
+          }
+        }
+        >.description{
+          width: 400px;
+        }
+      }
+      >.rightSide{
+        align-items: center;
+        width: 90%;
       }
     }
   }

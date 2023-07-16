@@ -43,9 +43,18 @@ import Input from './Input.vue';
         padding: 40px 25px 30px 25px;
       }
     }
+    // media query
     @media screen and (min-width: 1600px) {
         .signupContainer{
-            width: 640px;
+            width: 600px;
+            align-items: flex-end;
+        }
+    }
+    // 1200px
+    @media screen and (max-width:1200px) {
+        .signupContainer{
+            width: 90%;
+            // height: 590px;
         }
     }
 </style>
