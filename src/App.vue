@@ -25,7 +25,7 @@ import SignupForm from "./components/SignupForm.vue";
 .container {
   width: 100vw;
   height: 100vh;
-  background: url('./images/bg-intro-desktop.png') hsl(0, 100%, 74%);
+  background: url('/images/bg-intro-desktop.png') hsl(0, 100%, 74%);
   display: flex;
   justify-content: center;
   align-items: center;
